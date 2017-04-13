@@ -7,6 +7,7 @@
       }
 
       $data['title'] = ucfirst($page);
+//blablablabalblab
 
       $this->load->view('templates/header');
       $this->load->view('pages/'.$page, $data);
