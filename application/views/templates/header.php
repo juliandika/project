@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ciBlog</title>
+    <title>Web Project</title>
     <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
     <script src="http://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
