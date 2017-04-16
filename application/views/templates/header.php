@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Online Prrinting</title>
+    <title>Online Printing</title>
     <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
 
     <script src="http://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
@@ -19,13 +19,13 @@
         <div id="navbar">
           <ul class="nav navbar-nav">
             <li><a href="#">Print Dokumen</a></li>
-            <li><a href="<?php echo base_url(); ?>products">Lihat Harga</a></li>
+            <li><a href="<?php echo base_url(); ?>prices/index">Lihat Harga</a></li>
             <li><a href="<?php echo base_url(); ?>about">About</a></li>
 
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Create Posts</a></li>
-            <li><a href="#">Create Category</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Sign in</a></li>
           </ul>
         </div>
       </div>
