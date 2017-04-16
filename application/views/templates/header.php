@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Online Printing</title>
-    <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>bootstrap.min.css">
 
     <script src="http://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
     <script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
