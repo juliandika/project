@@ -1,30 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title></title>
-    <style>
-      #wrapper {
-        margin: auto;
-        width: 760px;
-        display: block;
-        background-color: #FFFFFF;
-      }
-      #formbody h1 {
-        text-align: center;
-      }
-      #registrasi {
-        padding: 5px 100px;
-      }
-      .error
-      {
-        color: red;
-        font-style: italic;
-        font-size: 10px;
-        visibility: hidden;
-      }
-    </style>
-  </head>
-  <body>
     <div id="wrapper">
     <div id="header">
     </div>
@@ -58,5 +31,3 @@
           </form>
         </div>
       </div>
-  </body>
-</html>

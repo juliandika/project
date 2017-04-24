@@ -13,6 +13,27 @@
     <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" language="javascript" src="//cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/plug-ins/9dcbecd42ad/integration/bootstrap/3/dataTables.bootstrap.css">
+    <style>
+      #wrapper {
+        margin: auto;
+        width: 760px;
+        display: block;
+        background-color: #FFFFFF;
+      }
+      #formbody h1 {
+        text-align: center;
+      }
+      #registrasi {
+        padding: 5px 100px;
+      }
+      .error
+      {
+        color: red;
+        font-style: italic;
+        font-size: 10px;
+        visibility: hidden;
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-inverse" style="background-color:#0099cc; color:white border-radius:0;">
@@ -72,14 +93,9 @@
           <div class="modal-footer">
             <p class="text-center">Already have an account? <a href="#">Sign In</a></p>
           </div>
+
         </div>
       </div>
     </div>
-  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <!--link yg dicopy dari w3schools.com-->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!--link yg dicopy dari web bootstrap-->
-
-    <script src="register.js"></script>
-  </body>
+  </div>
+</div>
