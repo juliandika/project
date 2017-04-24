@@ -25,7 +25,6 @@ class Pages extends CI_Controller
   {
     $this->load->view('templates/header');
     $this->load->view('print');
-    $this->load->view('templates/footer');
   }
 
   public function upload()
@@ -46,7 +45,6 @@ class Pages extends CI_Controller
       }
       else
       {
-
           $data = array('upload_data' => $this->upload->data());
           $data['post'] = $post;
           $this->load->view('templates/header');
