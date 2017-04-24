@@ -18,9 +18,9 @@
         </div>
         <div id="navbar">
           <ul class="nav navbar-nav">
-            <li><a href="#">Print Dokumen</a></li>
+            <li><a href="<?php echo base_url(); ?>pages/cetak">Print Dokumen</a></li>
             <li><a href="<?php echo base_url(); ?>prices/index">Lihat Harga</a></li>
-            <li><a href="<?php echo base_url(); ?>about">About</a></li>
+            <li><a href="<?php echo base_url(); ?>about">Tentang Kami</a></li>
 
           </ul>
           <ul class="nav navbar-nav navbar-right">
