@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2017 at 02:47 PM
+-- Generation Time: Apr 24, 2017 at 04:05 PM
 -- Server version: 10.1.13-MariaDB
--- PHP Version: 7.0.8
+-- PHP Version: 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,25 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `project`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `login`
---
-
-CREATE TABLE `login` (
-  `id` int(3) NOT NULL,
-  `username` varchar(10) NOT NULL,
-  `password` varchar(8) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `login`
---
-
-INSERT INTO `login` (`id`, `username`, `password`) VALUES
-(1, '123', '123');
 
 -- --------------------------------------------------------
 
@@ -62,18 +43,38 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `image`) VALUES
 (2, 'HVS A4 Color 80 g', 'Deskripsi Produk', 1500, 'aTq67qjnc.jpg'),
 (3, 'HVS A3 Color 80 g', 'Deskripsi Produk', 3000, 'dasi.jpg'),
 (4, 'Art Paper A3 150 g', 'Deskripsi Produk', 4000, 'sepatu-formal-pria-Alphavi-Black-4-400x400.jpg'),
-(5, 'Glossy Photo Paper A4 230 g', 'Deskripsi Produk', 3000, 'apolis-coop-leather-sandal-1-537x4022.jpg'),
-(6, 'a', 'a', 789, '17193-7x35.jpg');
+(5, 'Glossy Photo Paper A4 230 g', 'Deskripsi Produk', 3000, 'apolis-coop-leather-sandal-1-537x4022.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `register`
+--
+
+CREATE TABLE `register` (
+  `nama` varchar(11) NOT NULL,
+  `email` varchar(11) NOT NULL,
+  `notelepon` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `register`
+--
+
+INSERT INTO `register` (`nama`, `email`, `notelepon`, `username`, `password`) VALUES
+('andre', 'andre', 'andre', 'andre', 'andre'),
+('fdh', 'gdch', 'fvcd', 'gcg', 'gbncf'),
+('gfsrgf', 'hfdxhf', 'xfhx', 'fxbfh', 'xgv'),
+('jtgf', 'jfjgc', 'gcnjgcf', 'cngjf', 'fhj'),
+('erna', 'jhfv', 'jmhvj', 'mhvjm', 'vjm'),
+('gfgh', 'ngng', 'hgcngj', 'fjngv', 'hngc'),
+('erna', 'jhjmh', 'jhjmhv', 'jmhvh', 'hv mjhvj');
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `login`
---
-ALTER TABLE `login`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `products`
@@ -86,15 +87,10 @@ ALTER TABLE `products`
 --
 
 --
--- AUTO_INCREMENT for table `login`
---
-ALTER TABLE `login`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
