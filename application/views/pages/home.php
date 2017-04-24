@@ -5,7 +5,7 @@
       <div id="my-slider" class="carousel slide" data-ride="carousel">
 
         <ol class="carousel-indicators">
-          <li data-target="#my-slider" data-slide-to="0"></li>
+          <li data-target="#my-slider" data-slide-to="0" class="active"></li>
           <li data-target="#my-slider" data-slide-to="1"></li>
         </ol>
 
