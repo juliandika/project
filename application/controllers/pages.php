@@ -54,5 +54,28 @@ class Pages extends CI_Controller
           $this->load->view('templates/footer');
       }
   }
+
+  public function proses_register(){
+
+  if(isset($_POST['register'])){
+    $nama = $_POST['nama'];
+    $email = $_POST['email'];
+    $notelepon = $_POST['notelepon'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $data = array(
+            'nama'=> $nama,
+            'email'=> $email,
+            'notelepon'=> $notelepon,
+            'username'=> $username,
+            'password'=> $password);
+
+    $this->db->insert('register',$data);
+
+    if($this->db->affected_rows()==1){
+      redirect(base_url('pages/view'));
+    }
+  }
+  }
 }
 ?>
