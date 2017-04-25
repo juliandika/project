@@ -7,6 +7,7 @@
         <ol class="carousel-indicators">
           <li data-target="#my-slider" data-slide-to="0" class="active"></li>
           <li data-target="#my-slider" data-slide-to="1"></li>
+          <li data-target="#my-slider" data-slide-to="2"></li>
         </ol>
 
         <div class="carousel-inner" role="listbox">
@@ -17,7 +18,13 @@
             </div>
           </div>
           <div class="item">
-            <img src="images/1giantfern1920x1200" alt="abc" />
+            <img src="images/2_uschi_wolters_-_voreifel.jpg" alt="abc" />
+            <div class="carousel-caption">
+              <h1>CDE</h1>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/1kingfisher1920x1200.jpg" alt="abc" />
             <div class="carousel-caption">
               <h1>CDE</h1>
             </div>

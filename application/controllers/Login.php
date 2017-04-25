@@ -19,6 +19,7 @@ class Login extends CI_Controller {
 
 		if (($result['username'] == $user) and ($result['password']==$pass)) {
 			$this->session->set_userdata($result);
+			
 			redirect(base_url('/prices/index'));
 		}else{
 			echo "Username atau password salah";

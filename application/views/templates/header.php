@@ -50,7 +50,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right nav-list">
             <li><a href="#register" data-toggle="modal" data-target="#register">Register</a></li>
-            <li><a href="#">Sign in</a></li>
+            <li><a href="<?php echo base_url(); ?>login/index">Sign in</a></li>
           </ul>
         </div>
       </div>
@@ -69,27 +69,27 @@
             <div class="row">
               <form method="POST" action="<?php echo base_url('pages/proses_register')?>">
 
-              <input type="text" name="nama" id="nama" class="form-control" placeholder="Nama Lengkap"/>  
-              
+              <input type="text" name="nama" id="nama" class="form-control" placeholder="Nama Lengkap"/>
+
               <input type="text" name="email" id="email" class="form-control" placeholder="Alamat Email"/>
-              
+
               <input type="text" name="notelepon" id="notelepeon" class="form-control" placeholder="No Telepon"/>
-              
+
               <input type="text" name="username" id="username" class="form-control" placeholder="Username"/>
-              
+
               <input type="password" name="password" id="password" class="form-control" placeholder="Password"/>
-              
-                
+
+
               <div class="row form-group">
                 <div class="col-sm-12">
                   <button type="submit" name="register" value="submit" class="btn btn-primary"/>DAFTAR</button>
-                  
+
                 </div>
               </div>
-              
-              
+
+
               </form>
-          
+
           <div class="modal-footer">
             <p class="text-center">Already have an account? <a href="#">Sign In</a></p>
           </div>
