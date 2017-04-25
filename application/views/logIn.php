@@ -4,7 +4,7 @@
 	<link rel="stylesheet" href="<?php echo base_url(); ?>bootstrap.min.css">
 	<style type="text/css">
 		body{
-			background: url(<?= base_url()?>/image/imageLogin.jpg) fixed;
+			background: url(<?= base_url()?>/images/imageLogin.jpg) fixed;
 			-webkit-background-size:cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
