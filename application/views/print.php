@@ -5,8 +5,7 @@
           <h1>PRINT FILE</h1>
           <?php echo form_open_multipart('pages/upload'); ?>
             Nama</br><input type="text" name="nama" /></br>
-            <span id="errnama" class="error" />Nama wajib diisi</span>
-        	Kertas<br>
+            Kertas<br>
             <select id="bahan" name="nama">
               <option value="default">Pilih Bahan</option>
               <option value="CinaTipis">Cina Tipis</option>
