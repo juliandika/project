@@ -16,11 +16,9 @@
               <option value="JermanBeklid">Jerman Beklid</option>
               <option value="JermanJeruk">Jerman Jeruk</option>
             </select>
-            <span id="erragama" class="error"/><br>Agama kelamin wajib diisi</span>
             </br><br>
             Ukuran<br><input id="panjang" type="number" name="ukuran" />
            	<input id="lebar" type="number" name="ukuran" /><br>
-            <span id="erralamat" class="error" />Ukuran wajib diisi</span>
             </br>
 		    Select image to upload:
 		    <input type="file" name="fileToUpload" id="fileToUpload">
