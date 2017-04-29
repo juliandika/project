@@ -1,20 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2017 at 08:39 AM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.23
+-- Generation Time: Apr 29, 2017 at 02:50 PM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `project`
@@ -23,35 +23,17 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
---
-
-CREATE TABLE `login` (
-  `id` int(3) NOT NULL,
-  `username` varchar(10) NOT NULL,
-  `password` varchar(8) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `login`
---
-
-INSERT INTO `login` (`id`, `username`, `password`) VALUES
-(1, '123', '123');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `products`
 --
 
-CREATE TABLE `products` (
-  `id` int(10) NOT NULL,
+CREATE TABLE IF NOT EXISTS `products` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `description` text NOT NULL,
   `price` int(10) NOT NULL,
-  `image` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `image` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `products`
@@ -70,12 +52,13 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `image`) VALUES
 -- Table structure for table `register`
 --
 
-CREATE TABLE `register` (
+CREATE TABLE IF NOT EXISTS `register` (
   `nama` varchar(11) NOT NULL,
   `email` varchar(11) NOT NULL,
   `notelepon` varchar(255) NOT NULL,
   `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -84,45 +67,16 @@ CREATE TABLE `register` (
 
 INSERT INTO `register` (`nama`, `email`, `notelepon`, `username`, `password`) VALUES
 ('andre', 'andre', 'andre', 'andre', 'andre'),
-('fdh', 'gdch', 'fvcd', 'gcg', 'gbncf'),
-('gfsrgf', 'hfdxhf', 'xfhx', 'fxbfh', 'xgv'),
+('ayu', 'ayu@gmail.c', '12345', 'ayu', '25f9e794323b453885f5181f1b624d0b'),
+('candra', 'aaa@gmail.c', '123456789', 'candra', '25f9e794323b453885f5181f1b624d0b'),
 ('jtgf', 'jfjgc', 'gcnjgcf', 'cngjf', 'fhj'),
-('erna', 'jhfv', 'jmhvj', 'mhvjm', 'vjm'),
+('Made Erna S', 'ernasusanti', '081916544885', 'erna', 'ernaaaa'),
 ('gfgh', 'ngng', 'hgcngj', 'fjngv', 'hngc'),
+('gfsrgf', 'hfdxhf', 'xfhx', 'fxbfh', 'xgv'),
+('fdh', 'gdch', 'fvcd', 'gcg', 'gbncf'),
 ('erna', 'jhjmh', 'jhjmhv', 'jmhvh', 'hv mjhvj'),
-('asdfg', 'ghj', '', '', ''),
-('Made Erna S', 'ernasusanti', '081916544885', 'erna', 'ernaaaa');
+('erna', 'jhfv', 'jmhvj', 'mhvjm', 'vjm');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `login`
---
-ALTER TABLE `login`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `products`
---
-ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `login`
---
-ALTER TABLE `login`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `products`
---
-ALTER TABLE `products`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
