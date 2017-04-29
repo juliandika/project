@@ -66,7 +66,7 @@ class Pages extends CI_Controller
             'email'=> $email,
             'notelepon'=> $notelepon,
             'username'=> $username,
-            'password'=> $password);
+            'password'=> md5($password));
 
     $this->db->insert('register',$data);
 

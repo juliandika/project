@@ -15,14 +15,15 @@ class Login extends CI_Controller {
 		$pass = $this->input->post('password');
 		$this->db->select('username,password');
 		$this->db->where('username',$user);
-		$result=$this->db->get('login')->row_array();
+		$result=$this->db->get('register')->row_array();
 
-		if (($result['username'] == $user) and ($result['password']==$pass)) {
+		if (($result['username'] == $user) and ($result['password']==md5($pass))) {
 			$this->session->set_userdata($result);
-			
-			redirect(base_url('/prices/index'));
+			$message['isLogin']=true;
 		}else{
-			echo "Username atau password salah";
+			$message['isLogin']=false;
 		}
+		echo json_encode($message);
 	}
 }
+?>

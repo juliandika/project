@@ -30,7 +30,7 @@
                 <div class="panel-heading">
                     <span class="glyphicon glyphicon-lock"></span> Printing Online</div>
                 <div class="panel-body">
-                    <form action="<?php base_url(); ?>prosesLogin" class="form-horizontal" role="form" method="post" id="login">
+                    <form action="" class="form-horizontal" role="form" method="post" id="login">
                     <div class="form-group">
                         <label for="username" class="col-sm-3 control-label">
                             Username</label>
@@ -70,5 +70,31 @@
         </div>
     </div>
 </div>
+<script src="<?= base_url(); ?>assets/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#login').submit(function(e){
+            e.preventDefault();
+            var formData=new FormData(this);
+            $.ajax({
+                type:'POST',
+                url:'<?= base_url(); ?>Login/prosesLogin',
+                data:formData,
+                cache:false,
+                contentType:false,
+                processData:false,
+                success:function(data){
+                    var message = jQuery.parseJSON(data);
+                    if (message.isLogin) {
+                        window.location.replace("<?= base_url('/prices/index'); ?>");
+                    }else{
+                        alert("Usename atau Password salah");
+                        $('form')[0].reset();
+                    }
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
