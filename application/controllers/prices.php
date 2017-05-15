@@ -12,9 +12,10 @@ class prices extends CI_Controller {
 	{
 		$data['products'] = $this->model_products->all();
 
-    $this->load->view('templates/header');
-		$this->load->view('check_prices', $data);
-    $this->load->view('templates/footer');
+		$data['user'] = $this->session->userdata('username');
+	    $this->load->view('templates/header',$data);
+		$this->load->view('check_prices');
+	    $this->load->view('templates/footer');
 	}
 
 	/*public function add_to_cart($product_id){

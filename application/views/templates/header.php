@@ -43,14 +43,26 @@
         </div>
         <div id="navbar">
           <ul class="nav navbar-nav">
+            <li><a href="<?php echo base_url(); ?>pages/cetak">Print Banner</a></li>
             <li><a href="<?php echo base_url(); ?>pages/cetak">Print Dokumen</a></li>
             <li><a href="<?php echo base_url(); ?>prices/index">Lihat Harga</a></li>
             <li><a href="<?php echo base_url(); ?>about">Tentang Kami</a></li>
 
           </ul>
-          <ul class="nav navbar-nav navbar-right nav-list">
+          <ul class="nav navbar-nav navbar-right nav-list" id="navigasi">
             <li><a href="#register" data-toggle="modal" data-target="#register">Register</a></li>
-            <li><a href="<?php echo base_url(); ?>login/index">Sign in</a></li>
+            <?php if (isset($user)){ ?>
+              <li role="presentation" class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                  <?php echo $user; ?><span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Logout</a></li>
+                </ul>
+              </li>
+            <?php }else{ ?>
+              <li><a href="<?php echo base_url(); ?>login/index">Sign in</a></li>
+            <?php } ?>
           </ul>
         </div>
       </div>
