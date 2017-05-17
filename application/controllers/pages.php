@@ -15,15 +15,17 @@ class Pages extends CI_Controller
       }
 
       $data['title'] = ucfirst($page);
+      $data['user'] = $this->session->userdata('username');
 
-      $this->load->view('templates/header');
-      $this->load->view('pages/'.$page, $data);
+      $this->load->view('templates/header',$data);
+      $this->load->view('pages/'.$page);
       $this->load->view('templates/footer');
   }
 
   public function cetak()
   {
-    $this->load->view('templates/header');
+    $data['user'] = $this->session->userdata('username');
+    $this->load->view('templates/header',$data);
     $this->load->view('print');
   }
 
@@ -35,11 +37,12 @@ class Pages extends CI_Controller
       $config['max_size']             = 2048;
 
       $this->load->library('upload', $config);
+      $data['user'] = $this->session->userdata('username');
 
       if ( ! $this->upload->do_upload('fileToUpload'))
       {
           $error = array('error' => $this->upload->display_errors());
-          $this->load->view('templates/header');
+          $this->load->view('templates/header',$data);
           $this->load->view('print', $error);
           $this->load->view('templates/footer');
       }
@@ -47,8 +50,8 @@ class Pages extends CI_Controller
       {
           $data = array('upload_data' => $this->upload->data());
           $data['post'] = $post;
-          $this->load->view('templates/header');
-          $this->load->view('print_success', $data);
+          $this->load->view('templates/header',$data);
+          $this->load->view('print_success');
           $this->load->view('templates/footer');
       }
   }
