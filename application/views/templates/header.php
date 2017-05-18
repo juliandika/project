@@ -53,13 +53,16 @@
           </ul>
           <ul class="nav navbar-nav navbar-right nav-list" id="navigasi">
             <li><a href="#register" data-toggle="modal" data-target="#register">Register</a></li>
+
+
+
             <?php if (isset($user)){ ?>
               <li role="presentation" class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                   <?php echo $user; ?><span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Logout</a></li>
+                  <?php echo anchor('logout', 'Logout');?>
                 </ul>
               </li>
             <?php }else{ ?>

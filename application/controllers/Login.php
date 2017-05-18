@@ -1,29 +1,50 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
 
-	public function index()
-	{
-		$this->load->view('logIn'); //nama view Login
-	}
+  public function index(){
 
-	public function prosesLogin()
-	{
-		$user = $this->input->post('username');
-		$pass = $this->input->post('password');
-		$this->db->select('username,password');
-		$this->db->where('username',$user);
-		$result=$this->db->get('register')->row_array();
+    $this->form_validation->set_rules('username', 'Username', 'required|alpha_numeric');
+    $this->form_validation->set_rules('password', 'Password', 'required|alpha_numeric');
 
-		if (($result['username'] == $user) and ($result['password']==md5($pass))) {
-			$this->session->set_userdata($result);
-			$message['isLogin']=true;
-		}else{
-			$message['isLogin']=false;
-		}
-		echo json_encode($message);
-	}
+
+    if($this->form_validation->run() == FALSE){
+        $this->load->view('login');
+    } else {
+        $this->load->model('model_users');
+        $valid_user = $this->model_users->check_credential();
+
+        if($valid_user == FALSE){
+          $this->session->set_flashdata('error', 'Wrong username / password');
+          redirect('login');
+        } else {
+          // if the username and password is a Match
+          $this->session->set_userdata('username', $valid_user->username);
+          $this->session->set_userdata('group', $valid_user->group);
+
+
+          switch($valid_user->group){
+            case 1 : //admin
+                    redirect('admin/products');
+                    break;
+            case 2 : //member
+                    redirect('admin/products');
+                    break;
+            default: break;
+
+
+          }
+
+        }
+
+    }
+
+  }
+
+  public function logout(){
+    $this->session->sess_destroy();
+    redirect('login/index');
+  }
+
 }
-?>
