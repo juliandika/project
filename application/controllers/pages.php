@@ -29,6 +29,13 @@ class Pages extends CI_Controller
     $this->load->view('print');
   }
 
+  public function document()
+  {
+    $data['user'] = $this->session->userdata('username');
+    $this->load->view('templates/header',$data);
+    $this->load->view('print_document');
+  }
+
   public function upload()
   {
       $post = $this->input->post();

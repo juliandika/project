@@ -2,9 +2,9 @@
     <div id="header">
     </div>
         <div id="formbody">
-          <h1>PRINT FILE</h1>
+          <h1>PRINT BANNER</h1>
           <?php echo form_open_multipart('pages/upload'); ?>
-            Nama</br><input type="text" name="nama" /></br>
+            Nama File</br><input type="text" name="nama" /></br>
             Kertas<br>
             <select id="bahan" name="nama">
               <option value="default">Pilih Bahan</option>
@@ -16,14 +16,16 @@
               <option value="JermanJeruk">Jerman Jeruk</option>
             </select>
             </br><br>
-            Ukuran<br><input id="panjang" type="number" name="ukuran" />
-           	<input id="lebar" type="number" name="ukuran" /><br>
+            Ukuran<br><input id="panjang" type="number" name="ukuran" placeholder="Panjang" />
+           	<input id="lebar" type="number" name="ukuran" placeholder="Lebar" /><br> 
             </br>
-		    Select image to upload:
-		    <input type="file" name="fileToUpload" id="fileToUpload">
-		    <br><br>
-	        Total Harga<br><label id="harga"></label><br>
-          <input type="hidden" name="harga" id="inpHrg" />
+		        Select image to upload:
+		        <input type="file" name="fileToUpload" id="fileToUpload">
+		        <br><br>
+            Jumlah</br><input type="number" name="jumlah" id="jumlah" /></br>
+            Total Harga<br><label id="harga"></label><br>
+            Keterangan</br><input type="" name="" /></br>
+            <input type="hidden" name="harga" id="inpHrg" />
             <br/>
             <input type="submit" value="Submit"/>
           </form>
@@ -33,23 +35,27 @@
       <script type="text/javascript">
         $(document).ready(function(){
           $('#panjang').keyup(function(){
-            if ($('#panjang').val() != "" && $('#lebar').val() != "" && $('#bahan').val() != "default") harga();
+            if ($('#jumlah') != "" && $('#panjang').val() != "" && $('#lebar').val() != "" && $('#bahan').val() != "default") harga();
             else $('#harga').html("0");
           });
           $('#lebar').keyup(function(){
-            if ($('#lebar').val() != "" && $('#panjang').val() != "" && $('#bahan').val() != "default") harga();
+            if ($('#jumlah') != "" && $('#lebar').val() != "" && $('#panjang').val() != "" && $('#bahan').val() != "default") harga();
             else $('#harga').html("0");
           });
           $('#bahan').change(function(){
-            if ($('#lebar').val() != "" && $('#panjang').val() != "" && $('#bahan').val() != "default") harga();
+            if ($('#jumlah') != "" && $('#lebar').val() != "" && $('#panjang').val() != "" && $('#bahan').val() != "default") harga();
+            else $('#harga').html("0");
+          });
+          $('#jumlah').keyup(function(){
+            if ($('#jumlah') != "" && $('#lebar').val() != "" && $('#panjang').val() != "" && $('#bahan').val() != "default") harga();
             else $('#harga').html("0");
           });
 
           function harga() {
-            if ($('#bahan').val()=="CinaTipis") var hrg = $('#panjang').val() * $('#lebar').val() * 5000 + 10000;
-            else if($('#bahan').val()=="CinaTebal") var hrg = $('#panjang').val() * $('#lebar').val() * 5000 + 20000;
-            else if($('#bahan').val()=="KoreaTipis") var hrg = $('#panjang').val() * $('#lebar').val() * 5000 + 30000;
-            else var hrg = $('#panjang').val() * $('#lebar').val() * 5000 + 40000;
+            if ($('#bahan').val()=="CinaTipis") var hrg = ($('#panjang').val() * $('#lebar').val() * 5000 + 10000)*$('#jumlah').val();
+            else if($('#bahan').val()=="CinaTebal") var hrg = ($('#panjang').val() * $('#lebar').val() * 5000 + 20000)*$('#jumlah').val();
+            else if($('#bahan').val()=="KoreaTipis") var hrg = ($('#panjang').val() * $('#lebar').val() * 5000 + 30000)*$('#jumlah').val();
+            else var hrg = ($('#panjang').val() * $('#lebar').val() * 5000 + 40000)*$('#jumlah').val();
             
             $('#harga').html(hrg);
             $('#inpHrg').val(hrg);
