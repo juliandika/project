@@ -1,1 +1,2 @@
-<h2><?= $title ?></h2>
+<h2>Tntang Kami</h2>
+Online print,,,,,,

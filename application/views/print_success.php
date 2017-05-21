@@ -7,13 +7,6 @@
 				<li><?php echo $key;?>: <?php echo $value;?></li>
 			<?php endforeach; ?>
 		</ul>
-		<br><br>
-		<ul>
-			<?php 
-				foreach ($upload_data as $key => $value):?>
-				<li><?php echo $key;?>: <?php echo $value;?></li>
-			<?php endforeach; ?>
-		</ul>
 		</div>
 	</div>	
 </div>
