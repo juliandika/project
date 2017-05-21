@@ -8,12 +8,12 @@
             Kertas<br>
             <select id="bahan" name="nama">
               <option value="default">Pilih Bahan</option>
-              <option value="CinaTipis">Cina Tipis</option>
-              <option value="CinaTebal">Cina Tebal</option>
-              <option value="KoreaTipis">Korea Tipis</option>
-              <option value="KoreaTebal">Korea Tebal</option>
-              <option value="JermanBeklid">Jerman Beklid</option>
-              <option value="JermanJeruk">Jerman Jeruk</option>
+              <option value="CinaTipis">Flexi China</option>
+              <option value="CinaTebal">Flexi Korea</option>
+              <option value="KoreaTipis">Flexi Jerman</option>
+              <option value="KoreaTebal">Albatros</option>
+              <option value="JermanBeklid">Luster</option>
+              <option value="JermanJeruk">Glossy Paper</option>
             </select>
             </br><br>
             Ukuran<br><input id="panjang" type="number" name="ukuran" placeholder="Panjang" />
@@ -24,8 +24,11 @@
 		        <br><br>
             Jumlah</br><input type="number" name="jumlah" id="jumlah" /></br>
             Total Harga<br><label id="harga"></label><br>
-            Keterangan</br><input type="" name="" /></br>
             <input type="hidden" name="harga" id="inpHrg" />
+            <br/>
+            Telepon<br><input type="text" name="keterangan" /><br>
+            <br/>
+            Keterangan<br><input type="text" name="keterangan" /><br>
             <br/>
             <input type="submit" value="Submit"/>
           </form>

@@ -21,8 +21,11 @@
 		        <br><br>
             Jumlah</br><input type="" name="" /></br>
             Total Harga<br><label id="harga"></label><br>
-            Keterangan</br><input type="" name="" /></br>
             <input type="hidden" name="harga" id="inpHrg" />
+            <br/>
+            Telepon<br><input type="text" name="keterangan" /><br>
+            <br/>
+            Keterangan<br><input type="text" name="keterangan" /><br>
             <br/>
             <input type="submit" value="Submit"/>
           </form>
