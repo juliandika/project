@@ -29,7 +29,7 @@ class Login extends CI_Controller {
                     redirect('admin/products');
                     break;
             case 2 : //member
-                    redirect('admin/products');
+                    redirect('users/dashboard');
                     break;
             default: break;
 
