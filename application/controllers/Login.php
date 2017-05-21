@@ -6,7 +6,7 @@ class Login extends CI_Controller {
   public function index(){
 
     $this->form_validation->set_rules('username', 'Username', 'required|alpha_numeric');
-    $this->form_validation->set_rules('password', 'Password', 'required|alpha_numeric');
+    $this->form_validation->set_rules('password', 'Password');
 
 
     if($this->form_validation->run() == FALSE){
@@ -17,7 +17,7 @@ class Login extends CI_Controller {
 
         if($valid_user == FALSE){
           $this->session->set_flashdata('error', 'Wrong username / password');
-          redirect('login');
+          redirect('login/index');
         } else {
           // if the username and password is a Match
           $this->session->set_userdata('username', $valid_user->username);
@@ -26,7 +26,7 @@ class Login extends CI_Controller {
 
           switch($valid_user->group){
             case 1 : //admin
-                    redirect('admin/products');
+                    redirect('administrator/index');
                     break;
             case 2 : //member
                     redirect('users/dashboard');

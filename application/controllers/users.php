@@ -10,7 +10,7 @@ class Users extends CI_Controller
 
   function dashboard($data = NULL){
 
-    $this->load->view('admin_template_v', $data);
+    $this->load->view('users_template', $data);
   }
 }
 
