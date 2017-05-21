@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2017 at 03:37 PM
+-- Generation Time: May 21, 2017 at 06:47 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
@@ -19,6 +19,34 @@ SET time_zone = "+00:00";
 --
 -- Database: `project`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data`
+--
+
+CREATE TABLE `data` (
+  `id` int(10) NOT NULL,
+  `tipe` varchar(15) NOT NULL,
+  `nama` varchar(30) NOT NULL,
+  `bahan` varchar(20) NOT NULL,
+  `file` varchar(30) NOT NULL,
+  `panjang` int(11) DEFAULT NULL,
+  `lebar` int(11) DEFAULT NULL,
+  `jumlah` int(11) NOT NULL,
+  `harga` int(50) NOT NULL,
+  `telepon` int(14) NOT NULL,
+  `keterangan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `data`
+--
+
+INSERT INTO `data` (`id`, `tipe`, `nama`, `bahan`, `file`, `panjang`, `lebar`, `jumlah`, `harga`, `telepon`, `keterangan`) VALUES
+(1, '', 'tetstsst', 'KoreaTipis', 'tetstsst.jpg', 23, 58, 12, 80400000, 2147483647, 'teststs'),
+(2, 'document', 'asdsa', 'CinaTipis', 'asdsa.pdf', NULL, NULL, 1, 0, 2147483647, 'asdasda');
 
 -- --------------------------------------------------------
 
@@ -107,7 +135,13 @@ INSERT INTO `project_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('h780nd7g33q8cncqn86agt4or1lobg7u', '::1', 1495349685, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353334393638303b),
 ('d7fr5nb1u9rqpuh2bjr9jlod9mqdd3vu', '::1', 1495370955, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353337303839373b),
 ('3kge15llulvkmnbe88v7oh5gtonro0s0', '::1', 1495373497, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353337333233323b),
-('5qgjcoov512ocu3tv5rbj7nugannl7ot', '::1', 1495373810, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353337333634313b);
+('5qgjcoov512ocu3tv5rbj7nugannl7ot', '::1', 1495373810, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353337333634313b),
+('3hskjfgva9dq67fr40mbb09740qa7skv', '::1', 1495378185, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353337383038313b),
+('s6u588rfgkjhhaa3o8vvajbr4l5dom17', '::1', 1495379055, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353337393035353b),
+('d93r0p6pr6gihod4i52bcl276iarmi1q', '::1', 1495383658, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353338333532313b),
+('m3kmhhvbcbtjsi20rr1a206ilk4oh4ua', '::1', 1495384312, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353338343138333b),
+('amqlso8ohr6cg316mp52eduua9hv6r4o', '::1', 1495384577, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353338343537353b),
+('e4gmpcij8vq4a1t88fe9qvjbldipadon', '::1', 1495385181, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353338343931353b);
 
 -- --------------------------------------------------------
 
@@ -149,6 +183,12 @@ INSERT INTO `users` (`nama`, `email`, `notelepon`, `username`, `password`, `grou
 --
 
 --
+-- Indexes for table `data`
+--
+ALTER TABLE `data`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `groups`
 --
 ALTER TABLE `groups`
@@ -176,6 +216,11 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `data`
+--
+ALTER TABLE `data`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `groups`
 --

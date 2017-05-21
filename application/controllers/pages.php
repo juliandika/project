@@ -40,26 +40,31 @@ class Pages extends CI_Controller
   {
       $post = $this->input->post();
       $config['upload_path']          = './uploads/';
-      $config['allowed_types']        = 'jpg|png';
+      $config['allowed_types']        = 'jpg|png|doc|pdf';
       $config['max_size']             = 2048;
+      $config['file_name']             = $post['nama'];
 
       $this->load->library('upload', $config);
       $data['user'] = $this->session->userdata('username');
 
       if ( ! $this->upload->do_upload('fileToUpload'))
       {
+        echo "error";
           $error = array('error' => $this->upload->display_errors());
-          $this->load->view('templates/header',$data);
-          $this->load->view('print', $error);
-          $this->load->view('templates/footer');
       }
       else
       {
           $data = array('upload_data' => $this->upload->data());
+          $post['file'] = $this->upload->data('file_name');
           $data['post'] = $post;
-          $this->load->view('templates/header',$data);
-          $this->load->view('print_success');
-          $this->load->view('templates/footer');
+          $this->db->insert('data',$post);
+          if ($this->db->affected_rows() != 1) {
+            echo "gagal insert database";
+          }else{
+            $this->load->view('templates/header',$data);
+            $this->load->view('print_success');
+            $this->load->view('templates/footer');
+        }
       }
   }
 

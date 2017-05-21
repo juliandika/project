@@ -6,7 +6,7 @@
           <?php echo form_open_multipart('pages/upload'); ?>
             Nama File</br><input type="text" name="nama" /></br>
             Kertas<br>
-            <select id="bahan" name="nama">
+            <select id="bahan" name="bahan">
               <option value="default">Pilih Bahan</option>
               <option value="CinaTipis">Flexi China</option>
               <option value="CinaTebal">Flexi Korea</option>
@@ -16,8 +16,8 @@
               <option value="JermanJeruk">Glossy Paper</option>
             </select>
             </br><br>
-            Ukuran<br><input id="panjang" type="number" name="ukuran" placeholder="Panjang" />
-           	<input id="lebar" type="number" name="ukuran" placeholder="Lebar" /><br> 
+            Ukuran<br><input id="panjang" type="number" name="panjang" placeholder="Panjang" />
+           	<input id="lebar" type="number" name="lebar" placeholder="Lebar" /><br> 
             </br>
 		        Select image to upload:
 		        <input type="file" name="fileToUpload" id="fileToUpload">
@@ -26,9 +26,10 @@
             Total Harga<br><label id="harga"></label><br>
             <input type="hidden" name="harga" id="inpHrg" />
             <br/>
-            Telepon<br><input type="text" name="keterangan" /><br>
+            Telepon<br><input type="text" name="telepon" /><br>
             <br/>
             Keterangan<br><input type="text" name="keterangan" /><br>
+            <input type="hidden" name="tipe" value="banner">
             <br/>
             <input type="submit" value="Submit"/>
           </form>
