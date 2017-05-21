@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2017 at 02:34 PM
+-- Generation Time: May 21, 2017 at 03:37 PM
 -- Server version: 10.1.13-MariaDB
--- PHP Version: 7.0.8
+-- PHP Version: 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -62,7 +62,13 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `image`) VALUES
 (2, 'HVS A4 Color 80 g', 'Deskripsi Produk', 1500, 'paper-480538_960_7201.jpg'),
 (3, 'HVS A3 Color 80 g', 'Deskripsi Produk', 3000, 'paper-480538_960_7202.jpg'),
 (4, 'Art Paper A3 150 g', 'Deskripsi Produk', 4000, 'paper-480538_960_7203.jpg'),
-(5, 'Glossy Photo Paper A4 230 g', 'Deskripsi Produk', 3000, 'paper-480538_960_7204.jpg');
+(5, 'Glossy Photo Paper A4 230 g', 'Deskripsi Produk', 3000, 'paper-480538_960_7204.jpg'),
+(6, 'Flexi China', 'Bahan jenis ini agak halus dan agak tipis. Umumnya dipakai untuk mencetak Spanduk, Baliho, Umbul-Umbul, X-Banner, Roll Up, Y-Banner, I-Banner, Photowall, Mini X-Banner, Wallpaper, Backdrop, Billboard, maupun Backwall. Bahan jenis ini seratnya agak halus dan cocok untuk posisi iklan didalam ruangan (Indoor) maupun diluar ruangan (Outdoor).\r\ngramasi yang umum dipakai 230 s/d 400 gr. Untuk Lebar gulungan bahan untuk proses cetak diantara lebar 220cm, 250cm, 320cm dan 550cm.', 10000, 'Wrdq-flexi-china_(1).jpg'),
+(7, 'Flexi Korea', 'Bahan jenis ini agak kasar agak tebal. Umumnya dipakai untuk mencetak Spanduk, Baliho, Umbul-Umbul, X-Banner, Roll Up, Y-Banner, I-Banner, Photowall, Mini X-Banner, Backwall maupun Wallpaper.. Bahan jenis ini seratnya agak kasar agak tebal dan cocok untuk posisi iklan didalam ruangan (Indoor) maupun diluar ruangan (Outdoor).\r\ngramasi yang umum dipakai 230 s/d 350 gr. Untuk Lebar gulungan bahan untuk proses cetak diantara lebar 250cm, 320cm dan 550cm.', 20000, 'flexi1.jpg'),
+(8, 'Flexi Jerman', 'Bahan jenis ini lumayan kasar dan halus, dan bahannya ini juga lumayan tebal dari yang lainnya. Umumnya dipakai untuk mencetak Spanduk, Baliho, X-Banner, Mini X-Banner,  Roll Up, Y-Banner, I-Banner. Bahan jenis ini seratnya lumayan kasar dan halus dan cocok untuk posisi iklan didalam ruangan (Indoor) maupun diluar ruangan (Outdoor) karena bahannya yang lebih tebal..\r\ngramasi yang umum dipakai 230 s/d 400 gr. \r\nUntuk Lebar gulungan bahan untuk proses cetak diantara lebar 220cm, 250cm, 320cm dan 550cm.', 30000, '8Cob-flexi-jerman1.jpg'),
+(9, 'Albatros', 'Bahan jenis ini halus, tipis dan mengkilap. Umumnya dipakai untuk mencetak X-Banner, Roll Up, Y-Banner, I-Banner, Poster. Bahan jenis ini seratnya agak halus dan cocok untuk posisi iklan didalam ruangan (Indoor) dengan ditambahkan hasil finishing seperti laminating DOFF / GLOSSY supaya hasilnya lebih memuaskan. gramasi yang umum dipakai standar. Untuk Lebar gulungan bahan untuk proses cetak diantara lebar 90cm, 125cm, 150cm.', 30000, 'GnE9-bahan-albatros1.jpg'),
+(10, 'Luster', 'Bahan jenis ini agak kasar, lumayan tipis dan mengkilap. Umumnya dipakai untuk mencetak X-Banner, Roll Up, Y-Banner, I-Banner, Poster. Bahan jenis ini seratnya agak halus dan cocok untuk posisi iklan didalam ruangan (Indoor) tidak perlu ditambahkan hasil finishing seperti laminating DOFF / GLOSSY karena seratnya yang kasar laminating tidak akan dapat menempel pada permukaanya. Gramasi yang umum dipakai standar. Untuk Lebar gulungan bahan untuk proses cetak diantara lebar 90cm, 125cm, 150cm.', 30000, '8g9x-bahan-luster1.jpg'),
+(11, 'Glossy Paper', 'Bahan jenis ini halus, tebal dan berwarna putih. Umumnya dipakai untuk mencetak X-Banner, Roll Up, Y-Banner, I-Banner, Poster dan Foto. Bahan jenis ini seratnya halus dan cocok untuk posisi iklan didalam ruangan (Indoor) dengan ditambahkan hasil finishing seperti laminating DOFF / GLOSSY supaya hasilnya lebih memuaskan. Gramasi yang umum dipakai standar. Untuk Lebar gulungan bahan untuk proses cetak diantara lebar 90cm, 125cm, 150cm.', 30000, '150gsm-font-b-glossy-b-font-photo-font-b-paper-b-font-with-self-adhensive-for1.jpg');
 
 -- --------------------------------------------------------
 
@@ -98,7 +104,10 @@ INSERT INTO `project_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 ('3bj4urh865ubprqg9h88i2987dnntr80', '::1', 1495347946, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353334373934363b757365726e616d657c733a353a2261646d696e223b67726f75707c733a313a2231223b),
 ('gb798p9qh0cmi4jfs20brsrghsu11n1d', '::1', 1495348355, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353334383335353b757365726e616d657c733a353a2261646d696e223b67726f75707c733a313a2231223b),
 ('jkg2e91d5rhdovo5i7l0bf2ajvgq1f1r', '::1', 1495349671, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353334393637313b),
-('h780nd7g33q8cncqn86agt4or1lobg7u', '::1', 1495349685, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353334393638303b);
+('h780nd7g33q8cncqn86agt4or1lobg7u', '::1', 1495349685, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353334393638303b),
+('d7fr5nb1u9rqpuh2bjr9jlod9mqdd3vu', '::1', 1495370955, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353337303839373b),
+('3kge15llulvkmnbe88v7oh5gtonro0s0', '::1', 1495373497, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353337333233323b),
+('5qgjcoov512ocu3tv5rbj7nugannl7ot', '::1', 1495373810, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353337333634313b);
 
 -- --------------------------------------------------------
 
@@ -132,7 +141,8 @@ INSERT INTO `users` (`nama`, `email`, `notelepon`, `username`, `password`, `grou
 ('erna', 'jhjmh', 'jhjmhv', 'jmhvh', 'hv mjhvj', 0),
 ('juliandika', 'juuliandika', '12345', 'juli', '12345', 2),
 ('juli andika', 'juli', '12345', 'juli_andika', '827ccb0eea8a706c4c34a16891f84e7b', 2),
-('erna', 'jhfv', 'jmhvj', 'mhvjm', 'vjm', 0);
+('erna', 'jhfv', 'jmhvj', 'mhvjm', 'vjm', 0),
+('wiendu', 'wienduadi04', '082247973051', 'wiendu', 'a1cedb591a45b7348f71c3624ea56375', 0);
 
 --
 -- Indexes for dumped tables
@@ -175,7 +185,7 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
