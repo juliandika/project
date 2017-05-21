@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Online Printing</title>
     <link rel="stylesheet" href="<?php echo base_url(); ?>bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>styles.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
     <script src="http://cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
     <script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -51,13 +53,16 @@
           </ul>
           <ul class="nav navbar-nav navbar-right nav-list" id="navigasi">
             <li><a href="#register" data-toggle="modal" data-target="#register">Register</a></li>
+
+
+
             <?php if (isset($user)){ ?>
               <li role="presentation" class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                   <?php echo $user; ?><span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Logout</a></li>
+                  <?php echo anchor('logout', 'Logout');?>
                 </ul>
               </li>
             <?php }else{ ?>

@@ -78,7 +78,7 @@ class Pages extends CI_Controller
             'username'=> $username,
             'password'=> md5($password));
 
-    $this->db->insert('register',$data);
+    $this->db->insert('users',$data);
 
     if($this->db->affected_rows()==1){
       redirect(base_url('pages/view'));

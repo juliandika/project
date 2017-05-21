@@ -22,79 +22,37 @@
 	</style>
 </head>
 <body>
-<div class="container">
-    <div class="row vcenter">
-        <div class="col-md-4 col-md-offset-4">
-        <div id="alert" class="alert alert-danger text-center" role="alert" style="opacity: 0.8;display: none;"><strong>Username</strong> atau<strong> Password</strong> Salah</div>
-            <div class="panel panel-default" id="panel-login">
-                <div class="panel-heading">
-                    <span class="glyphicon glyphicon-lock"></span> Printing Online</div>
-                <div class="panel-body">
-                    <form action="" class="form-horizontal" role="form" method="post" id="login">
-                    <div class="form-group">
-                        <label for="username" class="col-sm-3 control-label">
-                            Username</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="password" class="col-sm-3 control-label">
-                            Password</label>
-                        <div class="col-sm-9">
-                            <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-3 col-sm-9">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox"/>
-                                    Remember me
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group last">
-                        <div class="col-sm-offset-3 col-sm-9">
-                            <button type="submit" class="btn btn-success btn-sm">
-                                Sign in</button>
-                                 <button type="reset" class="btn btn-default btn-sm">
-                                Reset</button>
-                        </div>
-                    </div>
-                    </form>
-                </div>
-                <div class="panel-footer">
-                </div>
-        </div>
-    </div>
-</div>
-<script src="<?= base_url(); ?>assets/js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('#login').submit(function(e){
-            e.preventDefault();
-            var formData=new FormData(this);
-            $.ajax({
-                type:'POST',
-                url:'<?= base_url(); ?>Login/prosesLogin',
-                data:formData,
-                cache:false,
-                contentType:false,
-                processData:false,
-                success:function(data){
-                    var message = jQuery.parseJSON(data);
-                    if (message.isLogin) {
-                        window.location.replace("<?= base_url('/prices/index'); ?>");
-                    }else{
-                        alert("Usename atau Password salah");
-                        $('form')[0].reset();
-                    }
-                }
-            });
-        });
-    });
-</script>
+
+	<div><?=validation_errors()?></div>
+			<div><?=$this->session->flashdata('error')?></div>
+			<?=form_open('login/index', ['class'=>'form-horizontal'])?>
+			  <div class="form-group">
+			    <label for="inputEmail3" class="col-sm-2 control-label">Username</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control" name="username">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+			    <div class="col-sm-10">
+			      <input type="password" class="form-control" name="password">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <div class="checkbox">
+			        <label>
+			          <input type="checkbox"> Remember me
+			        </label>
+			      </div>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-default">Sign in</button>
+			    </div>
+			  </div>
+			</form>
+
 </body>
 </html>
