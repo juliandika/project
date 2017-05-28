@@ -8,12 +8,12 @@
             Kertas<br>
             <select id="bahan" name="bahan">
               <option value="default">Pilih Bahan</option>
-              <option value="CinaTipis">Flexi China</option>
-              <option value="CinaTebal">Flexi Korea</option>
-              <option value="KoreaTipis">Flexi Jerman</option>
-              <option value="KoreaTebal">Albatros</option>
-              <option value="JermanBeklid">Luster</option>
-              <option value="JermanJeruk">Glossy Paper</option>
+              <option value="Flexi China">Flexi China</option>
+              <option value="Flexi Korea">Flexi Korea</option>
+              <option value="Flexi Jerman">Flexi Jerman</option>
+              <option value="Albatros">Albatros</option>
+              <option value="Luster">Luster</option>
+              <option value="Glossy Paper">Glossy Paper</option>
             </select>
             </br><br>
             Ukuran<br><input id="panjang" type="number" name="panjang" placeholder="Panjang" />
@@ -56,9 +56,9 @@
           });
 
           function harga() {
-            if ($('#bahan').val()=="CinaTipis") var hrg = ($('#panjang').val() * $('#lebar').val() * 5000 + 10000)*$('#jumlah').val();
-            else if($('#bahan').val()=="CinaTebal") var hrg = ($('#panjang').val() * $('#lebar').val() * 5000 + 20000)*$('#jumlah').val();
-            else if($('#bahan').val()=="KoreaTipis") var hrg = ($('#panjang').val() * $('#lebar').val() * 5000 + 30000)*$('#jumlah').val();
+            if ($('#bahan').val()=="Flexi China") var hrg = ($('#panjang').val() * $('#lebar').val() * 5000 + 10000)*$('#jumlah').val();
+            else if($('#bahan').val()=="Flexi Korea") var hrg = ($('#panjang').val() * $('#lebar').val() * 5000 + 20000)*$('#jumlah').val();
+            else if($('#bahan').val()=="Flexi Jerman") var hrg = ($('#panjang').val() * $('#lebar').val() * 5000 + 30000)*$('#jumlah').val();
             else var hrg = ($('#panjang').val() * $('#lebar').val() * 5000 + 40000)*$('#jumlah').val();
             
             $('#harga').html(hrg);

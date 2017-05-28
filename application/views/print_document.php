@@ -5,20 +5,31 @@
           <h1>PRINT DOKUMENT</h1>
           <?php echo form_open_multipart('pages/upload'); ?>
             Nama File</br><input type="text" name="nama" /></br>
-            Ukuran<br>
+            Bahan<br>
             <select id="bahan" name="bahan">
-              <option value="default">Kertas</option>
-              <option value="CinaTipis">Latter</option>
-              <option value="CinaTebal">A3</option>
-              <option value="KoreaTipis">A4</option>
-              <option value="KoreaTebal">Korea Tebal</option>
-              <option value="JermanBeklid">Jerman Beklid</option>
-              <option value="JermanJeruk">Jerman Jeruk</option>
+              <option value="default">Bahan</option>
+              <option value="Art Paper">Art Paper</option>
+              <option value="Art Karton">Art Karton</option>
+              <option value="Sublime Paper">Sublime Paper</option>
+              <option value="HVS">HVS</option>
+              <option value="Premium Glossy">Premium Glossy</option>
+              <option value="Sticker Glossy">Sticker Glossy</option>
             </select>
             </br><br>
 		        Select file to upload:
 		        <input type="file" name="fileToUpload" id="fileToUpload">
-		        <br><br>
+		        Ukuran<br>
+            <select id="Ukuran" name="ukuran">
+              <option value="default">Kertas</option>
+              <option value="F4">F4</option>
+              <option value="A3">A3</option>
+              <option value="A4">A4</option>
+              <option value="A5">A5</option>
+              <option value="B5">B5</option>
+              <option value="Q4">Q4</option>
+            </select>
+            </br>
+            <br>
             Jumlah</br><input type="number" name="jumlah" /></br>
             Telepon<br><input type="text" name="telepon" /><br>
             <br/>
