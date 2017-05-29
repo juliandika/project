@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2017 at 06:47 PM
+-- Generation Time: May 29, 2017 at 04:42 AM
 -- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.23
+-- PHP Version: 7.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -46,7 +46,9 @@ CREATE TABLE `data` (
 
 INSERT INTO `data` (`id`, `tipe`, `nama`, `bahan`, `file`, `panjang`, `lebar`, `jumlah`, `harga`, `telepon`, `keterangan`) VALUES
 (1, '', 'tetstsst', 'KoreaTipis', 'tetstsst.jpg', 23, 58, 12, 80400000, 2147483647, 'teststs'),
-(2, 'document', 'asdsa', 'CinaTipis', 'asdsa.pdf', NULL, NULL, 1, 0, 2147483647, 'asdasda');
+(2, 'document', 'asdsa', 'CinaTipis', 'asdsa.pdf', NULL, NULL, 1, 0, 2147483647, 'asdasda'),
+(3, 'banner', 'fajfkaa', 'KoreaTipis', 'fajfkaa1.jpg', 2, 2, 2, 100000, 853973, 'Keterangan'),
+(4, 'banner', 'jdaka', 'KoreaTebal', 'jdaka.png', 1, 1, 4, 180000, 4, '4');
 
 -- --------------------------------------------------------
 
@@ -116,32 +118,48 @@ CREATE TABLE `project_sessions` (
 --
 
 INSERT INTO `project_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
-('jsffsnbli55ickjjugicgcbmh5oba2fj', '::1', 1495067291, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353036373239313b757365726e616d657c733a353a2261646d696e223b67726f75707c733a313a2231223b),
-('murfjhvgmh4sha6lrn1sbohoaqvv7h70', '::1', 1495067297, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353036373239373b),
-('n8aibqu1p0r0abv09kcg67mqna4m7vmu', '::1', 1495096719, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353039363731393b),
-('arc8bgbmsqd37ka9oa9hdm5gbn21528p', '::1', 1495096720, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353039363731393b),
-('b5cuc4is6anifh1gkbdumo7pu2f2p31h', '::1', 1495336367, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353333363336373b),
-('mhlfbbijkihgm1oq34qon0ua7rivh4ll', '::1', 1495336816, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353333363831363b757365726e616d657c733a343a226a756c69223b67726f75707c733a313a2232223b),
-('u31e5klluq4s35ffagsiknpaj7ko5q8r', '::1', 1495337362, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353333373336323b757365726e616d657c733a343a226a756c69223b67726f75707c733a313a2232223b),
-('qgvgna4qn8bv4db4nnhal9v8ej1uh7af', '::1', 1495343094, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353334333039343b757365726e616d657c733a343a226a756c69223b67726f75707c733a313a2232223b),
-('n3cdinmhef5kvqifee5cq743aoc5p7kj', '::1', 1495343793, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353334333739333b757365726e616d657c733a343a226a756c69223b67726f75707c733a313a2232223b),
-('tubsltaofhr5of72qeq3ugrc6o7pkaqd', '::1', 1495345225, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353334353232353b757365726e616d657c733a343a226a756c69223b67726f75707c733a313a2232223b6572726f727c733a32353a2257726f6e6720757365726e616d65202f2070617373776f7264223b5f5f63695f766172737c613a313a7b733a353a226572726f72223b733a333a226f6c64223b7d),
-('6skbo1t6vvn0otn11ok17plult2d82mq', '::1', 1495346309, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353334363330393b757365726e616d657c733a353a2261646d696e223b67726f75707c733a313a2231223b),
-('o4q2rup45foqc1billmnhts45cfbhsjl', '::1', 1495346864, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353334363836343b),
-('2gof61pqnctlo58r34t1vlo23o0lv458', '::1', 1495347167, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353334373136373b757365726e616d657c733a353a2261646d696e223b67726f75707c4e3b),
-('3bj4urh865ubprqg9h88i2987dnntr80', '::1', 1495347946, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353334373934363b757365726e616d657c733a353a2261646d696e223b67726f75707c733a313a2231223b),
-('gb798p9qh0cmi4jfs20brsrghsu11n1d', '::1', 1495348355, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353334383335353b757365726e616d657c733a353a2261646d696e223b67726f75707c733a313a2231223b),
-('jkg2e91d5rhdovo5i7l0bf2ajvgq1f1r', '::1', 1495349671, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353334393637313b),
-('h780nd7g33q8cncqn86agt4or1lobg7u', '::1', 1495349685, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353334393638303b),
-('d7fr5nb1u9rqpuh2bjr9jlod9mqdd3vu', '::1', 1495370955, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353337303839373b),
-('3kge15llulvkmnbe88v7oh5gtonro0s0', '::1', 1495373497, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353337333233323b),
-('5qgjcoov512ocu3tv5rbj7nugannl7ot', '::1', 1495373810, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353337333634313b),
-('3hskjfgva9dq67fr40mbb09740qa7skv', '::1', 1495378185, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353337383038313b),
-('s6u588rfgkjhhaa3o8vvajbr4l5dom17', '::1', 1495379055, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353337393035353b),
-('d93r0p6pr6gihod4i52bcl276iarmi1q', '::1', 1495383658, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353338333532313b),
-('m3kmhhvbcbtjsi20rr1a206ilk4oh4ua', '::1', 1495384312, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353338343138333b),
-('amqlso8ohr6cg316mp52eduua9hv6r4o', '::1', 1495384577, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353338343537353b),
-('e4gmpcij8vq4a1t88fe9qvjbldipadon', '::1', 1495385181, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353338343931353b);
+('81d8l40e8rfrt5dkum9tmab9v7kdpcbc', '::1', 1495845621, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353834353632313b6c6f676765645f696e7c733a31323a225375646168204c6f6767696e223b69647c4e3b757365726e616d657c733a353a2261646d696e223b6c6576656c7c733a353a2261646d696e223b),
+('ppa2283d9l4kd9gn028nlbc1kp1qen89', '::1', 1495845777, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353834353632313b6c6f676765645f696e7c733a31323a225375646168204c6f6767696e223b69647c4e3b757365726e616d657c733a353a2261646d696e223b6c6576656c7c733a353a2261646d696e223b),
+('ovfd35hvaqnlmeenaj21jvfr5r34nic2', '::1', 1495846158, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353834363135383b6c6f676765645f696e7c733a31323a225375646168204c6f6767696e223b69647c4e3b757365726e616d657c733a353a2261646d696e223b6c6576656c7c733a353a2261646d696e223b),
+('ufua8oiqq3nvi7h68qqkvl0rrm55jpjj', '::1', 1495846231, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353834363231393b6c6f676765645f696e7c733a31323a225375646168204c6f6767696e223b69647c4e3b757365726e616d657c733a353a2261646d696e223b6c6576656c7c733a353a2261646d696e223b),
+('9uvh21t6gna3gk1j2l6avmts4u583i92', '::1', 1495846547, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353834363534373b6c6f676765645f696e7c733a31323a225375646168204c6f6767696e223b69647c4e3b757365726e616d657c733a363a226d656d626572223b6c6576656c7c733a363a226d656d626572223b),
+('cgm9ncioh2bjfn8d1jjh4ud09dkggr3m', '::1', 1495846672, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353834363534373b6c6f676765645f696e7c733a31323a225375646168204c6f6767696e223b69647c4e3b757365726e616d657c733a353a2261646d696e223b6c6576656c7c733a353a2261646d696e223b),
+('jibag4bhrgf78a9qckbu3ftss668i9l4', '::1', 1495846833, 0x5f5f63695f6c6173745f726567656e65726174657c693a313439353834363737373b6c6f676765645f696e7c733a31323a225375646168204c6f6767696e223b69647c4e3b757365726e616d657c733a363a226d656d626572223b6c6576656c7c733a363a226d656d626572223b);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `transaksi`
+--
+
+CREATE TABLE `transaksi` (
+  `id_transaksi` int(100) NOT NULL,
+  `id_user` int(100) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `nama_product` varchar(100) NOT NULL,
+  `image` text NOT NULL,
+  `Bahan` varchar(100) NOT NULL,
+  `Panjang` double NOT NULL,
+  `Lebar` double NOT NULL,
+  `Jumlah` int(20) NOT NULL,
+  `Harga` double NOT NULL,
+  `No_Telepon` varchar(50) NOT NULL,
+  `Keterangan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `transaksi`
+--
+
+INSERT INTO `transaksi` (`id_transaksi`, `id_user`, `username`, `nama_product`, `image`, `Bahan`, `Panjang`, `Lebar`, `Jumlah`, `Harga`, `No_Telepon`, `Keterangan`) VALUES
+(9, 16, 'candra', 'Art Paper 2', '180px-Bali_Ca2.png', '', 0, 0, 0, 0, '', ''),
+(10, 16, 'candra', 'HVS', '180px-Bali_Ca3.png', 'Flexi China', 2, 2, 2, 60000, '22324243', 'wsdsds'),
+(11, 16, 'candra', 'Print Baliho', '180px-Bali_Ta2.png', 'Flexi Korea', 2, 3, 2, 100000, '35343', 'redfdfd'),
+(12, 17, 'wienduadi', 'Print Baliho', '180px-Bali_Pa1.png', 'Flexi Korea', 2, 2, 100, 4000000, '1234', 'Antar Jemput'),
+(13, 17, 'wienduadi', 'Print Baliho Lagi', '180px-Bali_Ca.jpg', 'Glossy Paper', 2, 2, 12, 720000, '123', 'Antar jemput'),
+(14, 1, 'admin', 'Print Baru', '180px-Bali_Ca4.png', 'Glossy Paper', 2, 3, 2, 140000, '123456', 'ree'),
+(15, 1, 'admin', 'Print Baru', '180px-Bali_Ca5.png', 'Glossy Paper', 2, 3, 2, 140000, '123456', 'ree'),
+(16, 13, 'member', 'wewe', '180px-Bali_Ga.jpg', 'Flexi Korea', 4, 4, 2, 200000, '121324', 'erere');
 
 -- --------------------------------------------------------
 
@@ -150,33 +168,39 @@ INSERT INTO `project_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
 --
 
 CREATE TABLE `users` (
+  `id_user` int(11) NOT NULL,
+  `username` varchar(100) NOT NULL,
   `nama` varchar(11) NOT NULL,
   `email` varchar(11) NOT NULL,
   `notelepon` varchar(255) NOT NULL,
-  `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `group` tinyint(1) NOT NULL
+  `group` tinyint(1) NOT NULL,
+  `level` enum('admin','member') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`nama`, `email`, `notelepon`, `username`, `password`, `group`) VALUES
-('Admin', 'admin@gmail', '12345', 'admin', '12345', 1),
-('andre', 'andre', 'andre', 'andre', 'andre', 0),
-('ayu', 'ayu@gmail.c', '12345', 'ayu', '25f9e794323b453885f5181f1b624d0b', 0),
-('candra', 'aaa@gmail.c', '123456789', 'candra', '25f9e794323b453885f5181f1b624d0b', 0),
-('jtgf', 'jfjgc', 'gcnjgcf', 'cngjf', 'fhj', 0),
-('Made Erna S', 'ernasusanti', '081916544885', 'erna', 'ernaaaa', 0),
-('gfgh', 'ngng', 'hgcngj', 'fjngv', 'hngc', 0),
-('gfsrgf', 'hfdxhf', 'xfhx', 'fxbfh', 'xgv', 0),
-('fdh', 'gdch', 'fvcd', 'gcg', 'gbncf', 0),
-('erna', 'jhjmh', 'jhjmhv', 'jmhvh', 'hv mjhvj', 0),
-('juliandika', 'juuliandika', '12345', 'juli', '12345', 2),
-('juli andika', 'juli', '12345', 'juli_andika', '827ccb0eea8a706c4c34a16891f84e7b', 2),
-('erna', 'jhfv', 'jmhvj', 'mhvjm', 'vjm', 0),
-('wiendu', 'wienduadi04', '082247973051', 'wiendu', 'a1cedb591a45b7348f71c3624ea56375', 0);
+INSERT INTO `users` (`id_user`, `username`, `nama`, `email`, `notelepon`, `password`, `group`, `level`) VALUES
+(1, 'admin', 'Admin', 'admin@gmail', '12345', '827ccb0eea8a706c4c34a16891f84e7b', 1, 'admin'),
+(2, '', 'andre', 'andre', 'andre', 'andre', 0, 'admin'),
+(3, '', 'ayu', 'ayu@gmail.c', '12345', '25f9e794323b453885f5181f1b624d0b', 0, 'admin'),
+(4, '', 'candra', 'aaa@gmail.c', '123456789', '25f9e794323b453885f5181f1b624d0b', 0, 'admin'),
+(5, '', 'jtgf', 'jfjgc', 'gcnjgcf', 'fhj', 0, 'admin'),
+(6, '', 'Made Erna S', 'ernasusanti', '081916544885', 'ernaaaa', 0, 'admin'),
+(7, '', 'gfgh', 'ngng', 'hgcngj', 'hngc', 0, 'admin'),
+(8, '', 'gfsrgf', 'hfdxhf', 'xfhx', 'xgv', 0, 'admin'),
+(9, '', 'fdh', 'gdch', 'fvcd', 'gbncf', 0, 'admin'),
+(10, '', 'erna', 'jhjmh', 'jhjmhv', 'hv mjhvj', 0, 'admin'),
+(11, '', 'juliandika', 'juuliandika', '12345', '12345', 2, 'admin'),
+(12, '', 'juli andika', 'juli', '12345', '827ccb0eea8a706c4c34a16891f84e7b', 2, 'admin'),
+(13, 'member', 'member', '3', '3', '827ccb0eea8a706c4c34a16891f84e7b', 1, 'member'),
+(14, '', 'erna', 'jhfv', 'jmhvj', 'vjm', 0, 'admin'),
+(15, '', 'wiendu', 'wienduadi04', '082247973051', 'a1cedb591a45b7348f71c3624ea56375', 0, 'admin'),
+(16, 'candra', 'candra', 'candra', '', '827ccb0eea8a706c4c34a16891f84e7b', 0, 'member'),
+(17, 'wienduadi', 'wiendu adi', 'wiendu', '123', '827ccb0eea8a706c4c34a16891f84e7b', 0, 'member'),
+(18, 'ernasusanti', 'Erna', 'Erna', '12345', '827ccb0eea8a706c4c34a16891f84e7b', 0, 'member');
 
 --
 -- Indexes for dumped tables
@@ -207,10 +231,16 @@ ALTER TABLE `project_sessions`
   ADD KEY `ci_sessions_timestamp` (`timestamp`);
 
 --
+-- Indexes for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  ADD PRIMARY KEY (`id_transaksi`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`username`);
+  ADD PRIMARY KEY (`id_user`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -220,7 +250,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `data`
 --
 ALTER TABLE `data`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `groups`
 --
@@ -231,6 +261,16 @@ ALTER TABLE `groups`
 --
 ALTER TABLE `products`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+--
+-- AUTO_INCREMENT for table `transaksi`
+--
+ALTER TABLE `transaksi`
+  MODIFY `id_transaksi` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
