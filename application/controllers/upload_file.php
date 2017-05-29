@@ -64,7 +64,7 @@ class Upload_file extends CI_Controller {
 
 				);
 				$this->model_upload->create($data_product);
-				redirect('admin/products');
+				redirect('member/c_member');
 			}
 
 

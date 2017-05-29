@@ -68,21 +68,51 @@ $notelepon = $this->session->userdata('notelepon');
 
 
           <div class="form-group">
-          </br><br>Ukuran<br><input id="panjang" type="number" name="panjang" placeholder="Panjang" />
-          <input id="lebar" type="number" name="lebar" placeholder="Lebar" /><br>
-          </br>
+          <label for="inputEmail3" class="col-sm-2 control-label">Ukuran</label>
+          <div class="col-sm-10">
+          <input id="panjang" class="form-control" type="number" name="panjang" placeholder="Panjang" /><br>
+          <input id="lebar" class="form-control" type="number" name="lebar" placeholder="Lebar" /><br>
+          </div>
+            </br>
+          </div>
+
+
+          <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Jumlah</label>
+              <div class="col-sm-10">
+            <input type="number" class="form-control" name="jumlah" id="jumlah" /></br>
+          </div>
+
+          <div class="form-group">
+
+          <label for="inputEmail3" class="col-sm-2 control-label">Total Harga</label>
+          <br><label id="harga"></label><br>
+          <div class="col-sm-10">
+          <input type="hidden" class="form-control" name="harga" id="inpHrg" />
+        </div>
+      </div>
+          <br/>
+
+
+          <div class="form-group">
+
+            <label for="inputEmail3" class="col-sm-2 control-label">Telepon</label>
+            <div class="col-sm-10">
+          <input type="text" class="form-control" name="no_telepon" />
+        </div>
         </div>
 
 
-          Jumlah</br><input type="number" name="jumlah" id="jumlah" /></br>
-          Total Harga<br><label id="harga"></label><br>
-          <input type="hidden" name="harga" id="inpHrg" />
-          <br/>
-          Telepon<br><input type="text" name="no_telepon" /><br>
-          <br/>
-          Keterangan<br><input type="text" name="keterangan" /><br>
+
+        <div class="form-group">
+
+          <label for="inputEmail3" class="col-sm-2 control-label">Keterangan</label>
+          <div class="col-sm-10">
+          <br><input type="text"  class="form-control" name="keterangan" /><br>
           <input type="hidden" name="tipe" value="banner">
+        </div>
           <br/>
+          </div>
 
 
             <div class="form-group">
