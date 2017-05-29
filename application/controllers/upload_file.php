@@ -15,6 +15,14 @@ class Upload_file extends CI_Controller {
 		$data['notelepon'] = $this->session->userdata('notelepon');
 
 		$this->form_validation->set_rules('nama_product', 'Product Name', 'required');
+    $this->form_validation->set_rules('bahan', 'Bahan', 'required');
+    $this->form_validation->set_rules('panjang', 'Panjang', 'required');
+    $this->form_validation->set_rules('lebar', 'Lebar', 'required');
+    $this->form_validation->set_rules('jumlah', 'Jumlah', 'required');
+    $this->form_validation->set_rules('harga', 'Harga', 'required');
+    $this->form_validation->set_rules('no_telepon', 'No telepon', 'required');
+    $this->form_validation->set_rules('keterangan', 'Keterangan', 'required');
+
 		//$this->form_validation->set_rules('userfile', 'Product Image', 'required');
 
 		if($this->form_validation->run() === FALSE){
@@ -43,7 +51,15 @@ class Upload_file extends CI_Controller {
 
 				$data_product = array(
           'id_user'             => set_value('id_user'),
+          'username'            => set_value('username'),
 					'nama_product'				=> set_value('nama_product'),
+          'bahan'               => set_value('bahan'),
+          'panjang'             => set_value('panjang'),
+          'lebar'               => set_value('lebar'),
+          'jumlah'              => set_value('jumlah'),
+          'harga'               => set_value('harga'),
+          'no_telepon'          => set_value('no_telepon'),
+          'keterangan'          => set_value('keterangan'),
 					'image'				        => $gambar['file_name']
 
 				);

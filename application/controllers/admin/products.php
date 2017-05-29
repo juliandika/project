@@ -29,7 +29,7 @@ class Products extends CI_Controller {
       $this->load->view('templates/header');
 			$this->load->view('backend/add_products');
       $this->load->view('templates/footer');
-      
+
 		}else{
 			$config['upload_path'] = './uploads/';
 			$config['allowed_types'] = 'jpg|png';

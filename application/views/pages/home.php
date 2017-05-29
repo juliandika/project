@@ -10,19 +10,19 @@
 
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img src="images/1bixbybridge1920x1200.jpg" alt="abc" class="img-responsive" />
+            <img src="images/1bixbybridge1920x1200.jpg" class="img-responsive" />
             <div class="carousel-caption">
               <h1>PRINTING ONLINE</h1>
             </div>
           </div>
           <div class="item">
-            <img src="images/2_uschi_wolters_-_voreifel.jpg" alt="abc"  />
+            <img src="images/1giantfern1920x1200" class="img-responsive" />
             <div class="carousel-caption">
               <h1>PRINTING ONLINE</h1>
             </div>
           </div>
           <div class="item">
-            <img src="images/1kingfisher1920x1200.jpg" alt="abc" />
+            <img src="images/1kingfisher1920x1200.jpg" class="img-responsive" />
             <div class="carousel-caption">
               <h1>PRINTING ONLINE</h1>
             </div>

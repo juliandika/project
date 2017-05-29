@@ -66,7 +66,7 @@
                 </ul>
               </li>
             <?php }else{ ?>
-              <li><a href="<?php echo base_url(); ?>login/index">Sign in</a></li>
+              <li><a href="<?php echo base_url(); ?>auth/index">Sign in</a></li>
             <?php } ?>
           </ul>
         </div>

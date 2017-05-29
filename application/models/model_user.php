@@ -7,6 +7,14 @@
 			return $query;
 		}
 
+		public function view_data_user($username) {
+			$hasil = $this->db->where('username', $username)
+		                    ->limit(1)
+		                    ->get('transaksi');
+
+			return $hasil->row();
+		}
+
 	}
 
 ?>

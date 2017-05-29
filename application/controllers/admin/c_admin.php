@@ -8,17 +8,27 @@ class C_admin extends CI_Controller {
 			redirect('auth');
 		}
 		$this->load->helper('text');
+
+		$this->load->model('model_master_data');
 	}
 	public function index() {
 		$data['username'] = $this->session->userdata('username');
+
+		$data['transaksi'] = $this->model_master_data->all();
 		$this->load->view('admin/index', $data);
+
+
+
+
 	}
+
+
 
 	public function logout() {
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('level');
 		session_destroy();
-		redirect('auth');
+		redirect('auth/index');
 	}
 }
 ?>
