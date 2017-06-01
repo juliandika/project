@@ -74,8 +74,13 @@ class C_member extends CI_Controller {
 	public function view_konsultasi(){
 		$data['id_user'] = $this->session->userdata('id_user');
 		$data['username'] = $this->session->userdata('username');
-		$data['nama'] = $this->session->userdata('nama');
-		$data['notelepon'] = $this->session->userdata('notelepon');
+
+
+		$data['posts'] = $this->model_user->view_konsultasi($data['id_user']);
+		$this->load->view('member/header', $data);
+		$this->load->view('member/konsultasi_saya', $data);
+		$this->load->view('member/footer', $data);
+
 	}
 
 

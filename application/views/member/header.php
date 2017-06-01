@@ -259,7 +259,7 @@ desired effect
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Upload File</span></a></li>
-        <li><a href="<?php base_url(); ?>create"><i class="fa fa-link"></i> <span>Konsultasi</span></a></li>
+        <li><a href="http://localhost/project/member/posts/create"><i class="fa fa-link"></i> <span>Konsultasi</span></a></li>
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
             <span class="pull-right-container">
@@ -267,7 +267,7 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">Konsultasi saya</a></li>
+            <li><a href="<?php base_url(); ?>view_konsultasi">Konsultasi saya</a></li>
             <li><a href="#">Link in level 2</a></li>
           </ul>
         </li>

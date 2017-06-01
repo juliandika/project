@@ -14,6 +14,14 @@
 			return $hasil->result();
 		}
 
+
+		public function view_konsultasi($id_user) {
+			$hasil = $this->db->where('id_user', $id_user)
+												->get('posts');
+
+			return $hasil->result();
+		}
+
 	}
 
 ?>

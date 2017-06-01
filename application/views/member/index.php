@@ -1,6 +1,4 @@
 
-<
-
     <!-- Main content -->
     <section class="content">
       <p><?php echo $saldo['saldo']; ?></p>
@@ -69,4 +67,3 @@
   <!-- /.content-wrapper -->
 
   <!-- Main Footer -->
-  

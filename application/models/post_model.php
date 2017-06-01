@@ -8,6 +8,16 @@
 
     public function __construct(){
       $this->load->database();
+
+
+      if ($this->session->userdata('username')=="") {
+  			redirect('auth');
+  		}
+  		$this->load->helper('text');
+  		$this->load->model('model_user');
+  		$this->load->model('model_payment');
+
+
     }
     public function get_posts($slug = FALSE){
       if($slug === FALSE) {
@@ -23,9 +33,16 @@
 
     }
     public function create_post($post_image){
+
+
+      $data['id_user'] = $this->session->userdata('id_user');
+  		$data['username'] = $this->session->userdata('username');
+
+
       $slug = url_title($this->input->post('title'));
 
       $data = array(
+        'id_user' => set_value('id_user'),
         'title' => $this->input->post('title'),
         'slug' => $slug,
         'body' => $this->input->post('body'),

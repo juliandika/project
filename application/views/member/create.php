@@ -5,9 +5,17 @@
       <h2><?= $title; ?></h2>
 
 
+
+
       <?php echo validation_errors(); ?>
 
       <?php echo form_open_multipart('member/posts/create'); ?>
+
+      
+
+
+      <input type="hidden" class="form-control" name="id_user" placeholder="" value="<?= $id_user?>">
+
         <div class="form-group">
           <label>Judul Konsultasi</label>
           <input type="text" class="form-control" name="title" placeholder="Judul Konsultasi">
