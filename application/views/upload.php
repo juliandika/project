@@ -30,16 +30,16 @@ $notelepon = $this->session->userdata('notelepon');
         <?= form_open_multipart('upload_file/create', ['class'=>'form-horizontal'])?>
 
         <div class="form-group">
-          <label for="inputEmail3" class="col-sm-2 control-label">Id user</label>
+          <label for="inputEmail3" class="col-sm-2 control-label"></label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="id_user" placeholder="" value="<?= $id_user?>">
+            <input type="hidden" class="form-control" name="id_user" placeholder="" value="<?= $id_user?>">
           </div>
         </div>
 
         <div class="form-group">
-          <label for="inputEmail3" class="col-sm-2 control-label">Id user</label>
+          <label for="inputEmail3" class="col-sm-2 control-label"></label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" name="username" placeholder="" value="<?= $username?>">
+            <input type="hidden" class="form-control" name="username" placeholder="" value="<?= $username?>">
           </div>
         </div>
 

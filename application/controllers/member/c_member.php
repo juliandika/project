@@ -8,6 +8,7 @@ class C_member extends CI_Controller {
 		}
 		$this->load->helper('text');
 		$this->load->model('model_user');
+		$this->load->model('model_payment');
 
 	}
 	public function index() {
@@ -16,7 +17,11 @@ class C_member extends CI_Controller {
 		$data['nama'] = $this->session->userdata('nama');
 		$data['notelepon'] = $this->session->userdata('notelepon');
 
-		$data['transaksi'] = $this->model_user->view_data_user($username);
+
+		$data['saldo'] = $this->model_payment->get_saldo($data['id_user']);
+
+		var_dump($data['saldo']);
+		$data['transaksi'] = $this->model_user->view_data_user($data['username']);
 		$this->load->view('member/index', $data);
 
 	}

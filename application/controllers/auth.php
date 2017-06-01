@@ -20,6 +20,7 @@ class Auth extends CI_Controller {
 				$sess_data['level'] = $sess->level;
 				$sess_data['nama'] = $sess->nama;
 				$sess_data['notelepon'] = $sess->notelepon;
+				$sess_data['saldo'] = $sess->saldo;
 				$this->session->set_userdata($sess_data);
 			}
 			if ($this->session->userdata('level')=='admin') {
